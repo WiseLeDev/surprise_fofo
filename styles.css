@@ -1,94 +1,105 @@
-/* styles.css */
+/* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #ffd9e8, #fff0c2);
     margin: 0;
-    background-color: #f5f5fa;
-    overflow: hidden;
-}
-
-.container {
+    padding: 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 24px;
     color: #333;
 }
 
-#message {
-    font-size: 18px;
-    color: #666;
+header {
+    padding: 20px;
+    background: #ff8c94;
+    color: white;
+    border-bottom: 4px solid #ff6f81;
 }
 
-button {
-    padding: 12px 24px;
-    font-size: 16px;
-    margin-top: 20px;
-    cursor: pointer;
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Conteneur des surprises */
+.surprise-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Bloc des surprises */
+.surprise-block {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ff6f81;
+    transition: transform 0.3s ease;
+}
+
+.surprise-block:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff6f81;
+}
+
+/* Compte à rebours */
+.countdown {
+    font-size: 1.2rem;
+    color: #ff5050;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Bouton */
+.surprise-button {
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #ff6f61;
+    background: #ff6f81;
     color: white;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    cursor: not-allowed;
+    transition: background 0.3s ease;
 }
 
-button:hover {
-    background-color: #ff3d3d;
+.surprise-button:enabled {
+    background: #66cc66;
+    cursor: pointer;
 }
 
-#timer {
+footer {
+    background: #ff8c94;
+    color: white;
+    padding: 10px;
     margin-top: 20px;
-    font-size: 14px;
-    color: #666;
+    font-size: 0.9rem;
 }
 
-/* Ballons animés en arrière-plan */
-.balloon-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.balloon {
-    position: absolute;
-    bottom: -150px;
-    width: 60px;
-    height: 80px;
-    background-color: #ff6f61;
-    border-radius: 50% 50% 50% 50%;
-    opacity: 0.7;
-    animation: float 8s linear infinite;
-}
-
-.balloon1 { left: 20%; background-color: #ff6f61; animation-duration: 7s; }
-.balloon2 { left: 40%; background-color: #ffd700; animation-duration: 9s; }
-.balloon3 { left: 60%; background-color: #ff69b4; animation-duration: 6s; }
-.balloon4 { left: 80%; background-color: #87cefa; animation-duration: 10s; }
-.balloon5 { left: 10%; background-color: #32cd32; animation-duration: 8s; }
-
-@keyframes float {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.9;
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
     }
-    50% {
-        transform: translateY(-50px) scale(1.1);
-        opacity: 0.8;
+
+    h2 {
+        font-size: 1.2rem;
     }
-    100% {
-        transform: translateY(-100vh) scale(1);
-        opacity: 0;
+
+    .surprise-container {
+        grid-template-columns: 1fr;
     }
 }

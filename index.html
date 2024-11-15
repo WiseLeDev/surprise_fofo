@@ -3,26 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La semaine de fofolie</title>
+    <title>Surprises Anniversaire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Surprise du Jour 🎁</h1>
-        <p id="message">Clique pour découvrir la surprise du jour !</p>
-        <button id="revealButton">Découvrir la surprise</button>
-        <p id="timer">Prochaine surprise dans : <span id="countdown"></span></p>
-    </div>
-
-    <!-- Ballons en arrière-plan -->
-    <div class="balloon-container">
-        <div class="balloon balloon1"></div>
-        <div class="balloon balloon2"></div>
-        <div class="balloon balloon3"></div>
-        <div class="balloon balloon4"></div>
-        <div class="balloon balloon5"></div>
-    </div>
-
+    <header>
+        <h1>🎉 Surprises d'Anniversaire 🎉</h1>
+        <p>Chaque jour, découvre une nouvelle surprise !</p>
+    </header>
+    <main>
+        <div class="surprise-container">
+            <!-- 7 blocs pour les surprises -->
+            <div class="surprise-block">
+                <h2>Surprise 1</h2>
+                <div class="countdown" data-time="2024-11-16T00:00:00"></div>
+                <button disabled class="surprise-button">Ouvrir 🎁</button>
+            </div>
+            <div class="surprise-block">
+                <h2>Surprise 2</h2>
+                <div class="countdown" data-time="2024-11-17T00:00:00"></div>
+                <button disabled class="surprise-button">Ouvrir 🎁</button>
+            </div>
+            <div class="surprise-block">
+                <h2>Surprise 3</h2>
+                <div class="countdown" data-time="2024-11-18T00:00:00"></div>
+                <button disabled class="surprise-button">Ouvrir 🎁</button>
+            </div>
+            <div class="surprise-block">
+                <h2>Surprise 4</h2>
+                <div class="countdown" data-time="2024-11-19T00:00:00"></div>
+                <button disabled class="surprise-button">Ouvrir 🎁</button>
+            </div>
+            <div class="surprise-block">
+                <h2>Surprise 5</h2>
+                <div class="countdown" data-time="2024-11-20T00:00:00"></div>
+                <button disabled class="surprise-button">Ouvrir 🎁</button>
+            </div>
+            <div class="surprise-block">
+                <h2>Surprise 6</h2>
+                <div class="countdown" data-time="2024-11-21T00:00:00"></div>
+                <button disabled class="surprise-button">Ouvrir 🎁</button>
+            </div>
+            <div hidden="hidden" class="surprise-block">
+                <h2>Surprise 7</h2>
+                <div class="countdown" data-time="2024-11-22T00:00:00"></div>
+                <button disabled class="surprise-button">Ouvrir 🎁</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 | Site anniversaire 🎂</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
