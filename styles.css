@@ -1,7 +1,7 @@
-/* Styles généraux */
+/* styles.css */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #ffd9e8, #fff0c2);
+    background: #f5f5f5;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -9,97 +9,96 @@ body {
 }
 
 header {
-    padding: 20px;
-    background: #ff8c94;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
     color: white;
-    border-bottom: 4px solid #ff6f81;
+    padding: 20px 10px;
+    border-bottom: 5px solid #ffc1d3;
 }
 
-h1 {
-    font-size: 2.5rem;
+header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
-p {
-    margin: 0;
-    font-size: 1.2rem;
+header p {
+    margin: 10px 0 0;
 }
 
-/* Conteneur des surprises */
 .surprise-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-/* Bloc des surprises */
 .surprise-block {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border: 2px solid #ff6f81;
-    transition: transform 0.3s ease;
+    background: #fff;
+    border: 2px solid #ff758c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .surprise-block:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
-    font-size: 1.5rem;
+.surprise-block h2 {
     margin-bottom: 10px;
-    color: #ff6f81;
+    font-size: 1.5rem;
+    color: #ff7eb3;
 }
 
-/* Compte à rebours */
 .countdown {
     font-size: 1.2rem;
-    color: #ff5050;
     margin: 10px 0;
-    font-weight: bold;
+    color: #333;
 }
 
-/* Bouton */
 .surprise-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: #ff6f81;
+    background: #ff758c;
     color: white;
+    border: none;
+    padding: 10px 20px;
     font-size: 1rem;
-    cursor: not-allowed;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.surprise-button:enabled {
-    background: #66cc66;
-    cursor: pointer;
+.surprise-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.surprise-button:hover:not(:disabled) {
+    background: #ff4a6e;
+}
+
+.opening {
+    transform: scale(1.1);
+    animation: open-animation 1s forwards;
+}
+
+@keyframes open-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 footer {
-    background: #ff8c94;
+    background: #ff758c;
     color: white;
-    padding: 10px;
+    padding: 10px 0;
     margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    .surprise-container {
-        grid-template-columns: 1fr;
-    }
 }
