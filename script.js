@@ -6,8 +6,8 @@ document.querySelectorAll('.surprise-block').forEach((block, index) => {
     surpriseContent.classList.add('surprise-content');
 
     const surprises = [
-        `🎉 Une carte cadeau BeautyNail ByMylène de 30€ !`,
         `🎉 Une montre rose gold !`,
+        `🎉 Une carte cadeau BeautyNail ByMylène de 35€ !`,
         `🎉 Un petit texte !`,
         `🎉 Une clef USB !`,
         `🎉 Un set de création biscuits !`,
