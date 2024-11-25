@@ -10,7 +10,7 @@ document.querySelectorAll('.surprise-block').forEach((block, index) => {
         `🎉 Une carte cadeau BeautyNail ByMylène de 35€ !`,
         `🎉 Un petit texte !`,
         `🎉 Une clef USB !`,
-        `🎉 Un set de création biscuits !`,
+        `🎉 Vaiana 2, quand tu veux !`,
         `🎉 .. !`,
         `🎉 Rose + chocolat !`,
         `🎉 Tu dors à la maison + film !`
