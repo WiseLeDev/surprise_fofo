@@ -2,7 +2,7 @@ document.querySelectorAll('.surprise-block').forEach((block, index) => {
     const countdown = block.querySelector('.countdown');
     const button = block.querySelector('.surprise-button');
     const surpriseContent = document.createElement('div');
-    const debugMode = false; // Passez à `false` pour réactiver les délais
+    const debugMode = true; // Passez à `false` pour réactiver les délais
     surpriseContent.classList.add('surprise-content');
 
     const surprises = [
@@ -11,7 +11,7 @@ document.querySelectorAll('.surprise-block').forEach((block, index) => {
         `🎉 Un petit texte !`,
         `🎉 Une clef USB !`,
         `🎉 Vaiana 2, quand tu veux !`,
-        `🎉 .. !`,
+        `🎉 Cadre photo !`,
         `🎉 Rose + chocolat !`,
         `🎉 Tu dors à la maison + film !`
     ];
