@@ -2,7 +2,7 @@ document.querySelectorAll('.surprise-block').forEach((block, index) => {
     const countdown = block.querySelector('.countdown');
     const button = block.querySelector('.surprise-button');
     const surpriseContent = document.createElement('div');
-    const debugMode = true; // Passez à `false` pour réactiver les délais
+    const debugMode = false; // Passez à `false` pour réactiver les délais
     surpriseContent.classList.add('surprise-content');
 
     const surprises = [
